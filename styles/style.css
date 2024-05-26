@@ -354,7 +354,7 @@
 }
 
 .card__like-button:focus-visible {
-  box-shadow: 2px 2px 0 var(--accent-color);,
+  box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .button__text {
