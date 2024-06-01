@@ -163,8 +163,8 @@
           0 -1px var(--stoke-color);
 }
 
-.filter-blur {
-  filter: blur(50px);
+.filter-brightness {
+  filter: brightness(10%);
 }
 
 .filter-saturate {
