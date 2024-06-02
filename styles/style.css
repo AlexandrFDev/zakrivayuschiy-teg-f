@@ -51,7 +51,7 @@
 }
 
 .header__logo {
-  margin-block-start: clamp(120px,100%,136px);
+  margin-block-start: 136px;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
@@ -146,7 +146,9 @@
 }
 
 .card__item-wrapper-img {
+  display: flex;
   position: relative;
+  border-bottom: 2px solid var(--accent-color);
 }
 
 .card__item-label {
@@ -204,9 +206,12 @@
 }
 
 .card__item-img {
-  block-size: clamp(375px, 100%, 696px);
-  inline-size: clamp(375px, 100%, 696px);
-  border-bottom: 2px solid var(--accent-color);
+  block-size: 100%;
+  inline-size: 100%;
+  max-block-size: 696px;
+  min-block-size: 371px;
+  max-inline-size: 696px;
+  min-inline-size: 371px;
 }
 
 .card__item-group-description {
@@ -235,12 +240,16 @@
 .card__icon-button {
   padding: 0;
   inline-size: 42px;
-  block-size: 45px;
+  block-size: 38px;
   align-self: end;
   background-color: transparent;
   transition: 0.3s ease;
   border: 2px solid transparent;
+  display: flex;
   cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .card__icon-button:focus {
@@ -379,6 +388,15 @@
 }
 
 @media (width <= 375px) {
+  .header__logo {
+    margin-block-start: 120px;
+  }
+
+  .card__item-label {
+    right: 12px;
+    top: 21px;
+  }
+
   .button {
     flex-direction: column;
     max-width: 306px;
